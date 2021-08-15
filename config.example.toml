@@ -1,0 +1,26 @@
+prefix = '.'
+
+
+
+# Database url, only supports postgres at the moment (I don't plan on adding support for anything else)
+database = "postgres://username:password@example.com/database" # CHANGEME  
+
+# Discord bot token
+token = "" # CHANGEME
+
+
+# Discord application id, needed for interactions
+app_id = 0 #CHANGEME
+
+# Logs channel id
+logs_channel = 0 #CHANGEME
+
+
+
+# List of staff role ids (NOT names)
+# Used for controlling access to .panel
+staff_roles = [] # CHANGEME
+
+# Cooldown in seconds for ticket creation. THIS IS HIGHLY RECOMMENDED
+# Set to 0 to disable
+cooldown = 350
