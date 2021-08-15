@@ -1,23 +1,21 @@
-use std::path::Path;
+
 
 use crate::{
-    utils::{database::TicketStatus, files::write_messages},
+    utils::{database::TicketStatus},
     DATABASE, SETTINGS,
 };
 use serenity::{
     client::Context,
     model::{
         channel::{
-            ChannelType, GuildChannel, PermissionOverwrite, PermissionOverwriteType, ReactionType,
+            GuildChannel,
         },
         guild::Member,
         id::ChannelId,
-        interactions::{ButtonStyle, Interaction, InteractionResponseType, MessageComponent},
-        Permissions,
     },
     prelude::Mentionable,
 };
-use uuid::Uuid;
+
 
 pub async fn delete(ctx: &Context, closer: Member, channel: GuildChannel) -> anyhow::Result<()> {
     {

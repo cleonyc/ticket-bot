@@ -8,16 +8,16 @@ use serenity::{
     client::Context,
     model::{
         channel::{
-            ChannelType, GuildChannel, PermissionOverwrite, PermissionOverwriteType, ReactionType,
+            GuildChannel, PermissionOverwrite, PermissionOverwriteType, ReactionType,
         },
         guild::Member,
         id::ChannelId,
-        interactions::{ButtonStyle, Interaction, InteractionResponseType, MessageComponent},
+        interactions::{ButtonStyle},
         Permissions,
     },
     prelude::Mentionable,
 };
-use uuid::Uuid;
+
 
 pub async fn close(ctx: &Context, closer: Member, channel: GuildChannel) -> anyhow::Result<()> {
     let messages = {

@@ -1,23 +1,22 @@
-use std::path::Path;
+
 
 use crate::{
-    utils::{database::TicketStatus, files::write_messages},
+    utils::{database::TicketStatus},
     DATABASE, SETTINGS,
 };
 use serenity::{
     client::Context,
     model::{
         channel::{
-            ChannelType, GuildChannel, PermissionOverwrite, PermissionOverwriteType, ReactionType,
+            GuildChannel, PermissionOverwrite, PermissionOverwriteType,
         },
         guild::Member,
         id::ChannelId,
-        interactions::{ButtonStyle, Interaction, InteractionResponseType, MessageComponent},
         Permissions,
     },
     prelude::Mentionable,
 };
-use uuid::Uuid;
+
 
 pub async fn open(ctx: &Context, opener: Member, channel: GuildChannel) -> anyhow::Result<()> {
     {

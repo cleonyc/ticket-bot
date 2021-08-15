@@ -1,6 +1,6 @@
-use std::{collections::HashMap, env, sync::Arc};
+use std::{collections::HashMap, sync::Arc};
 
-use anyhow::Result;
+
 use commands::{add::*, close::*, delete::*, open::*, panel::*};
 use config::Config;
 use dotenv::dotenv;
@@ -11,7 +11,7 @@ use serenity::{
     framework::{standard::macros::group, StandardFramework},
     Client,
 };
-use time::OffsetDateTime;
+
 use tokio::sync::RwLock;
 use tracing_subscriber::{EnvFilter, FmtSubscriber};
 use utils::config::init_config;

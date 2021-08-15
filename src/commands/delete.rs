@@ -1,4 +1,4 @@
-use crate::{handlers, utils::database::TicketStatus, DATABASE};
+use crate::{handlers, DATABASE};
 use serenity::{
     client::Context,
     framework::standard::{macros::command, CommandResult},

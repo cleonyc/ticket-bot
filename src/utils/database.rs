@@ -1,7 +1,7 @@
-use std::env;
+
 
 use crate::SETTINGS;
-use dotenv::dotenv;
+
 use sqlx::{postgres::PgPoolOptions, Pool, Postgres};
 use uuid::Uuid;
 #[derive(Debug)]

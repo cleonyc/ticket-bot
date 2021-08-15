@@ -3,18 +3,14 @@ use crate::{
         panel::handle_panel_interaction, ticketclose::handle_close_interaction,
         ticketdelete::handle_delete_interaction, ticketopen::handle_open_interaction,
     },
-    DATABASE,
 };
 use serenity::{
     client::Context,
     model::{
-        channel::{ChannelType, ReactionType},
-        id::ChannelId,
-        interactions::{ButtonStyle, Interaction, InteractionData},
+        interactions::{Interaction, InteractionData},
     },
-    prelude::Mentionable,
 };
-use uuid::Uuid;
+
 
 pub async fn handle_interaction(ctx: &Context, interaction: Interaction) -> anyhow::Result<()> {
     match interaction.data.clone() {

@@ -1,23 +1,15 @@
-use std::path::Path;
+
 
 use crate::{
     handlers::close::close,
-    utils::{database::TicketStatus, files::write_messages},
-    DATABASE, SETTINGS,
 };
 use serenity::{
     client::Context,
     model::{
-        channel::{
-            ChannelType, GuildChannel, PermissionOverwrite, PermissionOverwriteType, ReactionType,
-        },
-        id::ChannelId,
-        interactions::{ButtonStyle, Interaction, InteractionResponseType, MessageComponent},
-        Permissions,
+        interactions::{Interaction, InteractionResponseType, MessageComponent},
     },
-    prelude::Mentionable,
 };
-use uuid::Uuid;
+
 
 pub async fn handle_close_interaction(
     ctx: &Context,
