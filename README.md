@@ -5,19 +5,28 @@ Designed to work in 1 guild at a time
 
 Default prefix is `.`
 
+# Usage
 ```
-.panel [channel_id] []
+.panel <Category ID to open tickets in> <Channel ID to send message in> "<Embed title>" "<Embed description>" "<Interaction Message>"
+```
+This creates a panel that users can click a button on to open a ticket.
 
+Inside a ticket:
 ```
-# Building
+.close:  closes ticket and saves transcript
+  ╰─➤ .delete: deletes ticket
+  ╰─➤ .open: reopens ticket
+```
+
+# Running
 
 Requirments:
  - cargo/rust (tested on 1.54 and 1.56-nightly)
 
-# Running
-
+I could publish a binary for it but that takes a lot of effort.  
+Because this is compiling from source it might take quite a while.
 ```
-
+git clone
 ```
 
 # Plans
@@ -35,3 +44,20 @@ Crypto would be best, you can email me at `henry0w@henry0w.com` for paypal or ot
 ETH: 0x70eecE9ad093f8d5402EFf12BaCc35f954bcE27E
 BTC: bc1q57q5tmrurzyhfv8jmsmep5rzvekewwkvsuhjw0
 ```
+
+# Copyright
+
+Copyright (C) 2021  Henry0w `<henry0w at henry0w dot com>`
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
